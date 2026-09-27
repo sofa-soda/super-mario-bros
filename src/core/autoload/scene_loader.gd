@@ -12,13 +12,12 @@ var use_sub_threads: bool = true # ResourceLoader loads scene using multiple thr
 # NOTE: uses _process() to poll the resource to check its progress.
 # Once loaded, it will switch the game to that scene and stop the _process()
 
-
 func _ready() -> void:
 	set_process(false) # used to stop and start the _process() function
 
 func load_scene(_scene_path: String) -> void:
 	""" 
-	Puts the loading screen in the game window. Sends status updates to the loading screen.
+	Loads in the loading screen + sends status updates to the loading screen.
 	After loading screen is ready, the scene will start to be loaded in.
 	Arguments: _scene_path (String)
 	"""
@@ -36,7 +35,7 @@ func load_scene(_scene_path: String) -> void:
 		set_process(true) # start main loop
 
 func _process(_delta: float) -> void:
-	""" Get and check the status of the threaded loader. """ 
+	""" Get and check the status of the threaded loader. Emit the status to the loading screen. """ 
 	var load_status: ResourceLoader.ThreadLoadStatus = ResourceLoader.load_threaded_get_status(scene_path, progress)
 	progress_changed.emit(progress[0])
 	match load_status:

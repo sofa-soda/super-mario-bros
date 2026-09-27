@@ -25,7 +25,6 @@ var map : Array[Array] = [
 	[P.BOUD,P.BOUD,P.BOUD,P.BOUD,P.BOUD,P.BOUD],
 ]
 
-signal start_level_one
 
 func _ready() -> void:
 	var new_timer : Timer = Timer.new()
@@ -40,8 +39,7 @@ func _unhandled_input(event):
 			move(dir)
 	if event.is_action_pressed("accept"):
 		if map[map_vector.x][map_vector.y] == P.LVL1:
-			Events.levels.level_started("01")
-			start_level_one.emit()
+			Events.levels.level_started.emit("01")
 
 
 func move(dir: String):

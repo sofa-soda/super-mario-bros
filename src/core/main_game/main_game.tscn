@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ceejtujcgmqos"]
 
+[ext_resource type="PackedScene" uid="uid://cy6rurxx54vps" path="res://src/debug/debug_text_overlay.tscn" id="1_3fed5"]
+
 [node name="MainGame" type="Node" unique_id=2086794959]
 process_mode = 3
 
@@ -46,3 +48,15 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+
+[node name="DebugLayer" type="CanvasLayer" parent="." unique_id=848386132]
+
+[node name="DebugRoot" type="Control" parent="DebugLayer" unique_id=779482065]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="DebugTextOverlay" parent="DebugLayer/DebugRoot" unique_id=127588628 instance=ExtResource("1_3fed5")]
+layout_mode = 0
