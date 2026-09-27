@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ukrwn7wk0105"]
+
+[ext_resource type="Texture2D" uid="uid://ba8cgkxi8tw0b" path="res://assets/art/ui/inventory/sample.png" id="1_0sani"]
+
+[node name="Inventory" type="Node2D" unique_id=305606811]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=953335335]
+position = Vector2(128, 200)
+texture = ExtResource("1_0sani")

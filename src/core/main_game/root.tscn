@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b7uuxmtfb1ht2"]
+
+[ext_resource type="PackedScene" uid="uid://ukrwn7wk0105" path="res://src/ui/hud/inventory/inventory.tscn" id="1_p1lnf"]
+[ext_resource type="PackedScene" uid="uid://12h2swu2g1tt" path="res://src/ui/opening_cutscene/opening_cutscene.tscn" id="2_qbsuh"]
+[ext_resource type="PackedScene" uid="uid://ctpdj40dd1jcc" path="res://src/ui/level_selection/level_selection.tscn" id="3_a2bqj"]
+
+[node name="Root" type="Node2D" unique_id=2004121784]
+
+[node name="Inventory" parent="." unique_id=305606811 instance=ExtResource("1_p1lnf")]
+
+[node name="OpeningCutscene" parent="." unique_id=1385674830 instance=ExtResource("2_qbsuh")]
+visible = false
+
+[node name="LevelSelection" parent="." unique_id=1473616153 instance=ExtResource("3_a2bqj")]

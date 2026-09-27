@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://core7w3mt7qt1"]
-
-[ext_resource type="Texture2D" uid="uid://ck7hgrpocxect" path="res://assets/art/level-selection/level-number.png" id="1_sxnil"]
-
-[node name="LevelIcon" type="Sprite2D" unique_id=355538647]
-texture = ExtResource("1_sxnil")
-region_enabled = true
-region_rect = Rect2(17, 0, 16, 16)
-region_filter_clip_enabled = true
